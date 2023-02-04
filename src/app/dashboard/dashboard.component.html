@@ -1,0 +1,42 @@
+<div id="dashboard">
+<h2 class="page-title">Coffee Menu</h2>
+<!--
+<div id="coffeeList">
+    <div class="coffeeListHeader">
+        <div class="colHeader">Blend Name</div>
+        <div class="colHeader">Variety</div>
+        <div class="colHeader">Notes</div>
+    </div>
+    <div class="coffeeListRow" *ngFor="let item of coffeeList; let i=index">
+        <div class="colBody">{{item.blend_name}}</div>
+        <div class="colBody">{{item.variety}}</div>
+        <div class="colBody">{{item.notes}}</div>
+    </div>
+</div>
+</div>-->
+
+
+<div class="example-container mat-elevation-z8">
+    <mat-table #table [dataSource]="coffeeList">
+        <!-- blend name Column -->
+        <ng-container matColumnDef="blend_name">
+            <mat-header-cell *matHeaderCellDef>Blend Name</mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.blend_name}} </mat-cell>
+          </ng-container>
+      
+          <!-- Variety Column -->
+          <ng-container matColumnDef="variety">
+            <mat-header-cell *matHeaderCellDef>Variety</mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.variety}} </mat-cell>
+          </ng-container>
+
+          <!-- Variety Column -->
+          <ng-container matColumnDef="notes">
+            <mat-header-cell *matHeaderCellDef>Notes</mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.notes}} </mat-cell>
+          </ng-container>
+
+          <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        </mat-table>
+        </div>
