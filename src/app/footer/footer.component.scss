@@ -1,9 +1,9 @@
 footer{
-    background-color:  rgb(221, 0, 49);
+    background-color:  #6f4e37;
     color: white;
     font-size: 14px;
     width: 100%;
-    padding: 10px 15px;
+    padding: 15px 15px;
     position: fixed;
     bottom: 0px;
     display: flex;
@@ -11,6 +11,7 @@ footer{
     box-sizing: border-box;
 
     p {
-        font-weight: 500;
+        font-style: italic;
+        margin: 0px;
     }
 }

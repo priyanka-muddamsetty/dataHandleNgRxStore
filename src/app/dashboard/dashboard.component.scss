@@ -6,14 +6,20 @@
         font-size: 18px;
         font-weight: bold;
         display: flex;
-        justify-content: left;
+        justify-content: center;
         font-family: cursive;
-        text-decoration: underline;
     }
     .page-title{
-        padding: 10px;
-        border-bottom: 1px solid #ccc;
         color: #312A24;
+        border-bottom: 1px solid #C5DBC8;
+        margin-bottom: 30px;
+        span{
+            display: inline-block;
+            position: relative;
+            top: 15px;
+            background: #fff;
+            padding: 0px 10px;
+        }
     }
     .coffeeListHeader{
         display: flex;
@@ -38,4 +44,17 @@
         border: 0px;
         flex: 1 1 0;
     }
+    .mat-header-cell{
+        font-size: 20px;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    #dashboard {
+        h2 {
+            justify-content: left;
+        }
+    }
+
 }

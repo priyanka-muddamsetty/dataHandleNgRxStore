@@ -52,3 +52,17 @@ a:hover {
     position: relative;
     top:60px;
 }
+
+.mat-table {
+  background: #B89E97;
+}
+.mat-header-cell{
+  color: #000;
+}
+.mat-row {
+  background: #D5C5B5;
+  border-bottom-color: #ECE9D2;
+  .mat-cell{
+    color: #000;
+  }
+}

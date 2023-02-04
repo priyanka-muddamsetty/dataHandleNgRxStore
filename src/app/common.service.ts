@@ -15,7 +15,7 @@ export class CommonService {
 
   public getList(){
     return new Promise((resolve, reject) => {
-      this.api.get(this.apiUrl, '/coffee/random_coffee?size=10').then((data: any) => {
+      this.api.get(this.apiUrl, '/coffee/random_coffee?size=100').then((data: any) => {
         resolve({ isSuccess: true, data});
       }, error => {
         reject(error);
