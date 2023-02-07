@@ -16,6 +16,7 @@ import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './app-state';
 import { CommonEffects } from './app-state/common.effects';
 import { EffectsModule } from '@ngrx/effects';
+import { ItemDetailComponent } from './item-detail/item-detail.component';
 
 @NgModule({
   
@@ -23,7 +24,8 @@ import { EffectsModule } from '@ngrx/effects';
     AppComponent,
     DashboardComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ItemDetailComponent
   ],
   imports: [
     BrowserModule,

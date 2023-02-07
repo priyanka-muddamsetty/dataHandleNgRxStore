@@ -5,7 +5,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import {CommonService} from '../common.service';
 import * as appActions from '../app-state/common.action';
 import { takeUntil } from 'rxjs/internal/operators/takeUntil';
-
+import { Router } from '@angular/router';
 import * as fromRoot from '../app-state';
 import { Subject } from 'rxjs';
 
@@ -21,16 +21,17 @@ import { Subject } from 'rxjs';
 
 export class DashboardComponent implements OnInit {
   public coffeeList: MatTableDataSource<any>;
-  displayedColumns: string[] = ['blend_name', 'variety', 'notes'];
+  displayedColumns: string[] = ['blend_name', 'variety', 'notes', 'id'];
   list: any[] = [];
   
   @ViewChild(MatPaginator) paginator: MatPaginator;
+  destroy$: Subject<boolean> = new Subject<boolean>();
 
-  constructor(private service:CommonService, private readonly store: Store) {
+  constructor(private service:CommonService, private readonly store: Store, private router: Router) {
     
     
    }
-   destroy$: Subject<boolean> = new Subject<boolean>();
+   
   ngOnInit(): void {
     this.store.dispatch(appActions.getList());
 
@@ -58,8 +59,14 @@ export class DashboardComponent implements OnInit {
     
   }
 
-  ngAfterViewInit() {
-    //this.coffeeList.paginator = this.paginator;
+  getDetails(id){
+    console.log('//////////', id);
+    this.router.navigate(['/detail', id]);
+  }
+
+  ngOnDestroy() {
+    this.destroy$.next(true);
+    this.destroy$.unsubscribe();
   }
 
 }

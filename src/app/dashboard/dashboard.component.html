@@ -38,6 +38,14 @@
             <mat-cell *matCellDef="let element"> {{element.notes}} </mat-cell>
           </ng-container>
 
+          <!-- Action Column -->
+          <ng-container matColumnDef="id">
+            <mat-header-cell *matHeaderCellDef>Action</mat-header-cell>
+            <mat-cell *matCellDef="let element" (click)="$event.stopPropagation()"> <a class="mat-button" (click)="getDetails(element.id)">
+              more details..
+            </a></mat-cell>
+          </ng-container>
+
           <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
             <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
         </mat-table>
