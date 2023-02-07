@@ -7,6 +7,7 @@ header {
     display: flex;
     justify-content: center;
     background-color: #6f4e37;
+    background-color:  #40312F;
     color: white;
     font-weight: 600;
     padding: 0px 15px;
@@ -14,6 +15,7 @@ header {
     font-size: 20px;
     font-size: 1.4rem;
     box-sizing: border-box;
+    background-image: linear-gradient(#40312F, #6f4e37);
 
     .logo{
         width: 35px;

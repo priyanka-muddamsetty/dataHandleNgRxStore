@@ -1,5 +1,6 @@
 footer{
     background-color:  #6f4e37;
+    background-color:  #40312F;
     color: white;
     font-size: 14px;
     width: 100%;
@@ -9,6 +10,7 @@ footer{
     display: flex;
     justify-content: flex-end;
     box-sizing: border-box;
+    background-image: linear-gradient(#6f4e37, #40312F);
 
     p {
         font-style: italic;

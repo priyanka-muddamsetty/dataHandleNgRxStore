@@ -66,3 +66,20 @@ a:hover {
     color: #000;
   }
 }
+.mat-paginator {
+  background: #B89E97;
+  color: #000;
+
+  .mat-select-value{
+    color: #000;
+  }
+}
+.mat-select-panel{
+  background: #B89E97;
+}
+.mat-form-field.mat-focused.mat-primary .mat-select-arrow, .mat-primary .mat-option.mat-selected:not(.mat-option-disabled){
+  color: #000;
+}
+.mat-form-field.mat-focused .mat-form-field-ripple {
+  background-color: #000;
+}

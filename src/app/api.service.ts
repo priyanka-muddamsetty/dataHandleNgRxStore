@@ -34,6 +34,10 @@ public get(url, reqParam): Promise<any> {
 })
 }
 
+getList(apiURL,length=10) {
+  return this.http.get(apiURL + '/coffee/random_coffee?size='+length)
+}
+
 /**
  * Handle the service response
  * @param data 

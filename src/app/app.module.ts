@@ -11,6 +11,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+
+import { StoreModule } from '@ngrx/store';
+import { reducers, metaReducers } from './app-state';
+import { CommonEffects } from './app-state/common.effects';
 import { EffectsModule } from '@ngrx/effects';
 
 @NgModule({
@@ -29,7 +33,10 @@ import { EffectsModule } from '@ngrx/effects';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    EffectsModule
+    StoreModule.forRoot(reducers, {
+      metaReducers
+    }),
+    EffectsModule.forRoot([CommonEffects])
   ],
   providers: [],
   bootstrap: [AppComponent]
